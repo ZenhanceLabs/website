@@ -24,7 +24,7 @@ const copy = {
     contactTitle: "お問い合わせ",
     contactBody: "プロダクトについて、協業について。お気軽にご連絡ください。",
     mailLabel: "メールでお問い合わせ",
-    mailHref: "mailto:zenhancelabs@gmail.com?subject=Zenhanceへのお問い合わせ",
+    mailHref: "mailto:support@zenhance.dev?subject=Zenhanceへのお問い合わせ",
   },
   en: {
     title: "Zenhance — Make every day a little better.",
@@ -51,7 +51,7 @@ const copy = {
     contactTitle: "Contact",
     contactBody: "Questions about our products or ideas for working together? We would love to hear from you.",
     mailLabel: "Email us",
-    mailHref: "mailto:zenhancelabs@gmail.com?subject=Contact%20Zenhance",
+    mailHref: "mailto:support@zenhance.dev?subject=Contact%20Zenhance",
   },
 };
 
