@@ -4,8 +4,8 @@ Zenhanceのプロダクト入口サイトです。GitHub Pagesで配信する静
 
 ## Products
 
-- [TATSU](https://zenhancelabs.github.io/tatsu-website/) — がんばらなくていいデジタルデトックス
-- [Fitlet](https://zenhancelabs.github.io/fitlet-website/) — ちょっと動くを、習慣に
+- [TATSU](https://zenhance.dev/tatsu/) — がんばらなくていいデジタルデトックス
+- [Fitlet](https://zenhance.dev/fitlet/) — ちょっと動くを、習慣に
 
 ## Ownership
 

@@ -23,12 +23,39 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Checkout Fitlet source
+        uses: actions/checkout@v4
+        with:
+          repository: ZenhanceLabs/fitlet-website
+          path: .build/fitlet-source
+      - name: Checkout TATSU source
+        uses: actions/checkout@v4
+        with:
+          repository: ZenhanceLabs/tatsu-website
+          path: .build/tatsu-source
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: .build/fitlet-source/package-lock.json
+      - name: Install Fitlet dependencies
+        working-directory: .build/fitlet-source
+        run: npm ci
+      - name: Build Fitlet for /fitlet/
+        working-directory: .build/fitlet-source
+        run: npm run build:pages
+        env:
+          NEXT_PUBLIC_BASE_PATH: /fitlet
+          NEXT_PUBLIC_SITE_ORIGIN: https://zenhance.dev
+      - name: Assemble custom-domain site
+        run: node scripts/assemble-pages.mjs
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload site
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: .
+          path: _site
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
