@@ -30,7 +30,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-
 .intro-kicker { margin: 0 0 26px; color: var(--muted); font-size: 17px; }
 h1, h2, h3, p { margin-top: 0; }
 h1 { max-width: 1100px; margin-bottom: 28px; font-size: clamp(48px, 7vw, 80px); font-weight: 600; line-height: 1.12; letter-spacing: -.02em; }
-.intro-copy { max-width: 760px; margin-bottom: 32px; color: var(--muted); font-size: 19px; line-height: 1.65; }
+.intro-copy { max-width: 1200px; margin-bottom: 32px; color: var(--muted); font-size: 19px; line-height: 1.65; }
 .button-link, .tile-link { display: inline-flex; align-items: center; gap: 8px; color: var(--blue); font-size: 17px; line-height: 1.47; }
 .button-link span:last-child, .tile-link span:last-child { font-size: 21px; transition: transform .2s ease; }.button-link:hover span:last-child, .tile-link:hover span:last-child { transform: translateY(2px); }
 
@@ -43,10 +43,10 @@ h1 { max-width: 1100px; margin-bottom: 28px; font-size: clamp(48px, 7vw, 80px); 
 
 .tile-art { position: relative; display: flex; align-items: flex-end; justify-content: center; height: 470px; margin-top: 48px; overflow: hidden; }.tile-art--fitlet { height: 510px; }
 .fitlet-device { position: relative; z-index: 1; width: 196px; aspect-ratio: 1170 / 2532; margin: 0; padding: 2px; overflow: visible; border: 3px solid #16181b; border-radius: 11% / 4.8%; background: #16181b; box-shadow: 0 20px 38px rgba(22, 24, 27, .16), 0 1px 0 rgba(255,255,255,.08) inset; }
-.fitlet-device-screen { position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: 9.5% / 4%; background: #fff; isolation: isolate; }.fitlet-device-screen img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: top center; background: #fff; }
+.fitlet-device-screen { position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: 9.5% / 4%; background: #fff; isolation: isolate; }.fitlet-device-screen img { display: block; width: 100%; height: 100%; object-fit: fill; object-position: top center; background: #fff; }
 .fitlet-device-notch { position: absolute; z-index: 2; top: 1.1%; left: 50%; width: 30.5%; height: 3.2%; border-radius: 999px; background: #070809; box-shadow: 0 1px 0 rgba(255,255,255,.06) inset; transform: translateX(-50%); }
 .fitlet-device-side-button { position: absolute; z-index: 1; width: 2.5px; border-radius: 4px 0 0 4px; background: #303338; box-shadow: 0 1px 0 rgba(255,255,255,.12) inset; }.fitlet-device-side-button-top { top: 22%; left: -6px; height: 6.8%; }.fitlet-device-side-button-middle { top: 31%; right: -6px; height: 12%; border-radius: 0 4px 4px 0; }
-.device--fitlet-left, .device--tatsu-left { transform: translateX(15px) rotate(-4deg); }.device--fitlet-right, .device--tatsu-right { z-index: 2; transform: translateX(-15px) rotate(4deg); }
+.device--fitlet-left, .device--tatsu-left { transform: translateX(15px) rotate(-4deg); }.device--fitlet-right, .device--tatsu-right { z-index: 2; transform: translateX(-15px) rotate(4deg); }.device--tatsu-left, .device--tatsu-right { aspect-ratio: 864 / 1920; }
 .tatsu-cat { position: absolute; z-index: 3; right: 21%; bottom: 80px; width: 144px; filter: drop-shadow(rgba(0, 0, 0, .22) 3px 5px 16px); }.fitlet-character { position: absolute; z-index: 3; right: 17%; bottom: 12px; width: 188px; filter: drop-shadow(rgba(0, 0, 0, .22) 3px 5px 16px); }
 
 .contact { padding: 112px 0 120px; background: var(--white); }.contact-inner { width: min(1200px, calc(100% - 48px)); margin: 0 auto; }.contact h2 { margin-bottom: 16px; font-size: 40px; font-weight: 600; letter-spacing: -.02em; }.contact-inner > p { margin-bottom: 42px; color: var(--muted); font-size: 17px; line-height: 1.65; }.contact-links { max-width: 700px; border-top: 1px solid var(--line); }.contact-links a { display: grid; grid-template-columns: 1fr auto 24px; align-items: center; gap: 20px; padding: 19px 0; border-bottom: 1px solid var(--line); color: var(--blue); font-size: 17px; }.contact-links a span:nth-child(2) { color: var(--muted); font-size: 15px; }.contact-links b { font-size: 20px; font-weight: 400; }.contact-links a:hover b { transform: translate(2px, -2px); }
