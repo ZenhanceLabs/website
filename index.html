@@ -14,10 +14,15 @@
   <body>
     <header class="global-nav">
       <div class="nav-inner">
-        <a class="wordmark" href="#top" aria-label="Zenhance ホーム">Zenhance</a>
-        <nav aria-label="メインナビゲーション">
-          <a href="#products">プロダクト</a>
-          <a href="#contact">お問い合わせ</a>
+        <a class="wordmark" href="#top" aria-label="Zenhance ホーム" data-i18n-attr="aria-label:homeAria">Zenhance</a>
+        <nav aria-label="メインナビゲーション" data-i18n-attr="aria-label:navAria">
+          <a href="#products" data-i18n="navProducts">プロダクト</a>
+          <a href="#contact" data-i18n="navContact">お問い合わせ</a>
+            <div class="locale-switch" role="group" aria-label="言語" data-i18n-attr="aria-label:languageAria">
+            <button type="button" data-locale="ja" class="is-active">日本語</button>
+            <span aria-hidden="true">/</span>
+            <button type="button" data-locale="en">English</button>
+          </div>
         </nav>
       </div>
     </header>
@@ -26,46 +31,61 @@
       <section class="intro">
         <div class="intro-inner">
           <p class="intro-kicker">Zenhance</p>
-          <h1>毎日を、少しだけ<br />よくする。</h1>
-          <p class="intro-copy">生活の中で続けたいことを、無理なく続けられるように。Zenhanceは、日々の小さな変化を支えるプロダクトをつくっています。</p>
-          <a class="button-link" href="#products">プロダクトを見る <span aria-hidden="true">↓</span></a>
+          <h1 data-i18n="heroTitle">毎日を、少しだけよくする。</h1>
+          <p class="intro-copy" data-i18n="heroCopy">生活の中で続けたいことを、無理なく続けられるように。Zenhanceは、日々の小さな変化を支えるプロダクトをつくっています。</p>
+          <a class="button-link" href="#products"><span data-i18n="heroButton">プロダクトを見る</span> <span aria-hidden="true">↓</span></a>
         </div>
       </section>
 
       <section class="product-list" id="products" aria-labelledby="products-title">
         <div class="section-lead">
-          <h2 id="products-title">プロダクト</h2>
-          <p>今つくっているもの。</p>
+          <h2 id="products-title" data-i18n="productsTitle">プロダクト</h2>
         </div>
-
-        <article class="product-tile product-tile--dark" id="tatsu">
-          <div class="tile-inner">
-            <div class="tile-copy">
-              <p class="product-name">TATSU</p>
-              <h3>がんばらなくていい<br />デジタルデトックス。</h3>
-              <p>スマートフォンとの距離を、意志の力だけに頼らず整えるアプリです。</p>
-              <a class="tile-link tile-link--light" href="https://zenhancelabs.github.io/tatsu-website/" target="_blank" rel="noreferrer">TATSUのサイトを見る <span aria-hidden="true">↗</span></a>
-            </div>
-            <div class="tile-art tile-art--tatsu" aria-label="TATSUアプリの画面と電子猫">
-              <div class="phone phone--tatsu-left"><img src="assets/tatsu-home.png" alt="TATSUのホーム画面" /></div>
-              <div class="phone phone--tatsu-right"><img src="assets/tatsu-obtain-cat.png" alt="TATSUで電子猫と出会う画面" /></div>
-              <img class="tatsu-cat" src="assets/tatsu-raccoon.png" alt="TATSUの電子猫" />
-            </div>
-          </div>
-        </article>
 
         <article class="product-tile product-tile--light" id="fitlet">
           <div class="tile-inner">
             <div class="tile-copy">
               <p class="product-name product-name--fitlet"><img src="assets/fitlet-logo.svg" alt="Fitlet" /></p>
-              <h3>ちょっと動くを、<br />習慣に。</h3>
-              <p>マップを進み、カメラで回数を数え、仲間と続けるトレーニングアプリです。</p>
-              <a class="tile-link" href="https://zenhancelabs.github.io/fitlet-website/" target="_blank" rel="noreferrer">Fitletのサイトを見る <span aria-hidden="true">↗</span></a>
+              <h3 data-i18n="fitletTitle">ちょっと動くを、習慣に。</h3>
+              <p data-i18n="fitletBody">マップを進み、カメラで回数を数え、仲間と続けるトレーニングアプリです。</p>
+              <a class="tile-link" href="https://zenhancelabs.github.io/fitlet-website/" target="_blank" rel="noreferrer"><span data-i18n="fitletLink">Fitletのサイトを見る</span> <span aria-hidden="true">↗</span></a>
             </div>
-            <div class="tile-art tile-art--fitlet" aria-label="Fitletアプリの画面とキャラクター">
-              <div class="phone phone--fitlet-left"><img src="assets/fitlet-home.png" alt="Fitletのホーム画面" /></div>
-              <div class="phone phone--fitlet-right"><img src="assets/fitlet-session.png" alt="Fitletのトレーニング画面" /></div>
-              <img class="fitlet-character" src="assets/fitlet-character.png" alt="Fitletのキャラクター" />
+            <div class="tile-art tile-art--fitlet" data-i18n-attr="aria-label:fitletArt">
+              <figure class="fitlet-device device--fitlet-left">
+                <span class="fitlet-device-side-button fitlet-device-side-button-top" aria-hidden="true"></span>
+                <span class="fitlet-device-side-button fitlet-device-side-button-middle" aria-hidden="true"></span>
+                <div class="fitlet-device-screen"><span class="fitlet-device-notch" aria-hidden="true"></span><img data-image-key="fitletHome" src="assets/fitlet-home-ja.png" alt="Fitletのホーム画面" /></div>
+              </figure>
+              <figure class="fitlet-device device--fitlet-right">
+                <span class="fitlet-device-side-button fitlet-device-side-button-top" aria-hidden="true"></span>
+                <span class="fitlet-device-side-button fitlet-device-side-button-middle" aria-hidden="true"></span>
+                <div class="fitlet-device-screen"><span class="fitlet-device-notch" aria-hidden="true"></span><img data-image-key="fitletSession" src="assets/fitlet-session-ja.png" alt="Fitletのトレーニング画面" /></div>
+              </figure>
+              <img class="fitlet-character" src="assets/fitlet-character.png" alt="Fitletのキャラクター" data-i18n-attr="alt:fitletCharacterAlt" />
+            </div>
+          </div>
+        </article>
+
+        <article class="product-tile product-tile--dark" id="tatsu">
+          <div class="tile-inner">
+            <div class="tile-copy">
+              <p class="product-name">TATSU</p>
+              <h3 data-i18n="tatsuTitle">がんばらなくていいデジタルデトックス。</h3>
+              <p data-i18n="tatsuBody">スマートフォンとの距離を、意志の力だけに頼らず整えるアプリです。</p>
+              <a class="tile-link tile-link--light" href="https://zenhancelabs.github.io/tatsu-website/" target="_blank" rel="noreferrer"><span data-i18n="tatsuLink">TATSUのサイトを見る</span> <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="tile-art tile-art--tatsu" data-i18n-attr="aria-label:tatsuArt">
+              <figure class="fitlet-device device--tatsu-left">
+                <span class="fitlet-device-side-button fitlet-device-side-button-top" aria-hidden="true"></span>
+                <span class="fitlet-device-side-button fitlet-device-side-button-middle" aria-hidden="true"></span>
+                <div class="fitlet-device-screen"><span class="fitlet-device-notch" aria-hidden="true"></span><img data-image-key="tatsuHome" src="assets/tatsu-home-ja.png" alt="TATSUのホーム画面" /></div>
+              </figure>
+              <figure class="fitlet-device device--tatsu-right">
+                <span class="fitlet-device-side-button fitlet-device-side-button-top" aria-hidden="true"></span>
+                <span class="fitlet-device-side-button fitlet-device-side-button-middle" aria-hidden="true"></span>
+                <div class="fitlet-device-screen"><span class="fitlet-device-notch" aria-hidden="true"></span><img data-image-key="tatsuAnalysis" src="assets/tatsu-analysis-1-ja.png" alt="TATSUの分析画面" /></div>
+              </figure>
+              <img class="tatsu-cat" src="assets/tatsu-cat-basic.png" alt="TATSUの白猫" data-i18n-attr="alt:tatsuCatAlt" />
             </div>
           </div>
         </article>
@@ -73,11 +93,11 @@
 
       <section class="contact" id="contact" aria-labelledby="contact-title">
         <div class="contact-inner">
-          <h2 id="contact-title">お問い合わせ</h2>
-          <p>プロダクトについて、協業について。お気軽にご連絡ください。</p>
+          <h2 id="contact-title" data-i18n="contactTitle">お問い合わせ</h2>
+          <p data-i18n="contactBody">プロダクトについて、協業について。お気軽にご連絡ください。</p>
           <div class="contact-links">
-            <a href="mailto:zenhancelabs@gmail.com?subject=Zenhanceへのお問い合わせ">メールでお問い合わせ <span>zenhancelabs@gmail.com</span><b aria-hidden="true">↗</b></a>
-            <a href="https://x.com/ZenhanceLabs" target="_blank" rel="noreferrer">X <span>@ZenhanceLabs</span><b aria-hidden="true">↗</b></a>
+            <a href="mailto:zenhancelabs@gmail.com?subject=Zenhanceへのお問い合わせ" data-i18n-attr="href:mailHref"><span data-i18n="mailLabel">メールでお問い合わせ</span><span>zenhancelabs@gmail.com</span><b aria-hidden="true">↗</b></a>
+            <a href="https://x.com/ZenhanceLabs" target="_blank" rel="noreferrer"><span>X</span><span>@ZenhanceLabs</span><b aria-hidden="true">↗</b></a>
           </div>
         </div>
       </section>
@@ -86,7 +106,6 @@
     <footer class="site-footer">
       <div class="footer-inner">
         <a class="wordmark" href="#top">Zenhance</a>
-        <p>運営：Zenhance　開発：ZenhanceLabs</p>
         <p>© <span id="year">2026</span> Zenhance</p>
       </div>
     </footer>
