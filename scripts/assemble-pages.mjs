@@ -13,6 +13,7 @@ for (const name of ["index.html", "styles.css", "script.js", "CNAME", "robots.tx
   await cp(join(root, name), join(output, name));
 }
 await cp(join(root, "assets"), join(output, "assets"), { recursive: true });
+await cp(join(root, ".well-known"), join(output, ".well-known"), { recursive: true });
 await cp(fitletDist, join(output, "fitlet"), { recursive: true });
 
 const tatsuOutput = join(output, "tatsu");
