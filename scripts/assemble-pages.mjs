@@ -9,7 +9,7 @@ const tatsuSource = resolve(process.env.TATSU_SOURCE ?? ".build/tatsu-source");
 await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
 
-for (const name of ["index.html", "styles.css", "script.js", "CNAME", "robots.txt", "sitemap.xml", "site.webmanifest"]) {
+for (const name of ["index.html", "styles.css", "script.js", "CNAME", "robots.txt", "sitemap.xml", "site.webmanifest", "app-ads.txt"]) {
   await cp(join(root, name), join(output, name));
 }
 await cp(join(root, "assets"), join(output, "assets"), { recursive: true });
